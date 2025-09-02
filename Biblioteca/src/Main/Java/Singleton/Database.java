@@ -1,13 +1,11 @@
-package Main.Java.Singleton;
+package Singleton;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import Main.Java.Factory.Libro;
-
     public class Database {
         private static Database instance;
-        private List<Libro> libros;
+        private List<Main.Java.Factory.Libro> libros;
 
         private Database() {
             libros = new ArrayList<>();
@@ -20,11 +18,11 @@ import Main.Java.Factory.Libro;
             return instance;
         }
 
-        public void agregarLibro(Libro libro) {
+        public void agregarLibro(Main.Java.Factory.Libro libro) {
             libros.add(libro);
         }
 
-        public List<Libro> getLibros() {
+        public List<Main.Java.Factory.Libro> getLibros() {
             return libros;
         }
     }
