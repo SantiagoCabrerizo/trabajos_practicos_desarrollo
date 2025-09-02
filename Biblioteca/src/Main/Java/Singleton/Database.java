@@ -1,21 +1,25 @@
 package Singleton;
 
+import javax.xml.crypto.Data;
 import java.util.ArrayList;
 import java.util.List;
 
     public class Database {
-        private static Database instance;
-        private List<Main.Java.Factory.Libro> libros;
+        private static volatile Database instance;
+        private List<Main.Java.Factory.Libro> libros = new ArrayList<>();
 
         private Database() {
-            libros = new ArrayList<>();
+            System.out.println("Accediendo a la base de datos...");
         }
 
-        public static synchronized Database getInstance() {
-            if (instance == null) {
-                instance = new Database();
-            }
-            return instance;
+        public static Database getInstance() {
+            if (instance == null) { //Primera verificacion (sin lock)
+                synchronized (Database.class) {
+                    if (instance == null) {
+                        instance = new Database();
+                    }
+                }
+            } return instance;
         }
 
         public void agregarLibro(Main.Java.Factory.Libro libro) {
