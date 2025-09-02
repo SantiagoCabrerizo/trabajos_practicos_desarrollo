@@ -1,4 +1,4 @@
-package Main.Java.Factory;
+package Factory;
 
  abstract class LogisticaLibro {
 

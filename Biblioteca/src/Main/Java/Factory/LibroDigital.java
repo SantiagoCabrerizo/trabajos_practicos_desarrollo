@@ -1,4 +1,4 @@
-package Main.Java.Factory;
+package Factory;
 
 public class LibroDigital implements Libro{
   private String titulo;
