@@ -12,6 +12,7 @@ public class LibroDigital implements Libro{
     }
 
 
+
     @Override
     public void MostrarInfo(){
             System.out.println(" Libro Digital: "+ titulo +" Formato: "+formato+" Autor: "+autor);

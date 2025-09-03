@@ -1,4 +1,4 @@
-package Main.Java.AbstractFactory;
+package AbstractFactory;
 
 public class EnvioNormal {
 }
