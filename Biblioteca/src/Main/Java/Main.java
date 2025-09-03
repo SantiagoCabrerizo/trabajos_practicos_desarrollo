@@ -1,5 +1,6 @@
 import Factory.Libro;
 import Factory.LibroFisico;
+import Factory.LogisticaLibro;
 import Prototype.Prestamo;
 import Singleton.Database;
 
@@ -9,19 +10,40 @@ import java.time.LocalDateTime;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+
+        System.out.println("------------PARTE 2 ---------------");
+        System.out.println("");
+        System.out.println("Creo Libros y los muestro");
+        System.out.println("");
+
+        Libro libro1 = LogisticaLibro.crearLibro("LibroFisico","La cascada", "Julio del campo", "tercera edicion", "-");
+        Libro libro2 = LogisticaLibro.crearLibro("LibroDigital", "La puerta", "Armando esteban Rojas", "", "PDF");
+        Libro libro3 = LogisticaLibro.crearLibro("LibroFisico","La catarata", "Julio del campo", "segunda edicion", "");
+
+
+        libro1.MostrarInfo();
+        libro2.MostrarInfo();
+        libro3.MostrarInfo();
+
+
+
         //Singleton
+        System.out.println("");
         System.out.println("------------PARTE 1 ---------------");
+        System.out.println("");
 
         Database db1 = Database.getInstance(); // Obtener instancia de la base de datos
-        db1.agregarLibro(new LibroFisico("El Quijote", "Miguel de Cervantes", "tercera edicion"));
+        db1.agregarLibro(libro1);
 
         Database db2 = Database.getInstance();          // Obtener otra "instancia" (en realidad es la misma)
-        db2.agregarLibro(new LibroFisico("Cien Años de Soledad", "Gabriel García Márquez", "segunda edicion"));
+        db2.agregarLibro(libro3);
 
         System.out.println(db1.getLibros());
 
         System.out.println("");
         System.out.println("------------PARTE 5 ---------------");
+        System.out.println("");
+
         //Prototype
 
         // Creamos un préstamo original
@@ -51,6 +73,12 @@ public class Main {
         // Verificamos si son el mismo objeto
         System.out.println("\n¿prestamo1 y prestamo2 son el mismo objeto? " + (prestamo1 == prestamo2));
         System.out.println("\n¿prestamo2 y prestamo3 son el mismo objeto? " + (prestamo2 == prestamo3));
+
+
+
+
+
+
 
     }
 
