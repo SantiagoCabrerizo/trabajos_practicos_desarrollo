@@ -6,7 +6,7 @@ import java.util.List;
 
     public class Database {
         private static volatile Database instance;
-        private List<Main.Java.Factory.Libro> libros = new ArrayList<>();
+        private List<Factory.Libro> libros = new ArrayList<>();
 
         private Database() {
             System.out.println("Accediendo a la base de datos...");
@@ -22,11 +22,11 @@ import java.util.List;
             } return instance;
         }
 
-        public void agregarLibro(Main.Java.Factory.Libro libro) {
+        public void agregarLibro(Factory.Libro libro) {
             libros.add(libro);
         }
 
-        public List<Main.Java.Factory.Libro> getLibros() {
+        public List<Factory.Libro> getLibros() {
             return libros;
         }
     }

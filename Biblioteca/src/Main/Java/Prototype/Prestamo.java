@@ -1,17 +1,20 @@
 package Prototype;
 
+import Factory.Libro;
+
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import Factory.Libro;
 
 public class Prestamo implements Cloneable {
-    private String libro;
+    private Libro Libro;
     private String usuario;
     private LocalDateTime fechaHoraInicio;
     private LocalDateTime fechaHoraFin;
 
-
-
-    public Prestamo(String libro, String usuario, LocalDateTime fechaHoraInicio, LocalDateTime fechaHoraFin) {
-        this.libro = libro;
+    public Prestamo(Factory.Libro libro, String usuario, LocalDateTime fechaHoraInicio, LocalDateTime fechaHoraFin) {
+        Libro = libro;
         this.usuario = usuario;
         this.fechaHoraInicio = fechaHoraInicio;
         this.fechaHoraFin = fechaHoraFin;
@@ -26,6 +29,6 @@ public class Prestamo implements Cloneable {
         }
     }
  public void mostrar(){
-     System.out.println("el libro: "+ libro+ "sera prestado al Usuario: "+usuario+ "hasta: "+ fechaHoraFin);
+     System.out.println("el libro: "+ Libro + "sera prestado al Usuario: "+usuario+ "hasta: "+ fechaHoraFin);
  }
 }

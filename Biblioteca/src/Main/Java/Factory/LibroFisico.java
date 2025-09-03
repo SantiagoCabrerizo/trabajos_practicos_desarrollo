@@ -10,6 +10,7 @@ public class LibroFisico implements Libro{
         this.autor = autor;
         this.edicion = edicion;
     }
+
     @Override
     public void MostrarInfo(){
 

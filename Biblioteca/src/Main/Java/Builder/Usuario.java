@@ -1,4 +1,4 @@
-package Main.Java.Builder;
+package Builder;
 
 public  class Usuario {
     private final String NombreUsuario;
