@@ -4,6 +4,11 @@ import javax.xml.crypto.Data;
 import java.util.ArrayList;
 import java.util.List;
 import Factory.Libro;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
     public class Database {
         private static volatile Database instance;
         private List<Libro> libros = new ArrayList<>();
@@ -37,4 +42,14 @@ import Factory.Libro;
             System.out.println("lista de libros a continuacion...");
             return libros;
         }
+
+        public Libro getLibro(int index) {
+            if (index >= 0 && index < libros.size()) {
+                return libros.get(index);
+            } else {
+                throw new IndexOutOfBoundsException("No existe un libro en el índice " + index);
+            }
+        }
+
+
     }

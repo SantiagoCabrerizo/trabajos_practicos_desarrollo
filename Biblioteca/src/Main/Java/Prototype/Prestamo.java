@@ -6,7 +6,12 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import Factory.Libro;
+import Factory.LibroFisico;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class Prestamo implements Cloneable {
     private Libro Libro;
     private String usuario;
@@ -14,7 +19,7 @@ public class Prestamo implements Cloneable {
     private LocalDateTime fechaHoraFin;
 
     public Prestamo(Factory.Libro libro, String usuario, LocalDateTime fechaHoraInicio, LocalDateTime fechaHoraFin) {
-        Libro = libro;
+        this.Libro = libro;
         this.usuario = usuario;
         this.fechaHoraInicio = fechaHoraInicio;
         this.fechaHoraFin = fechaHoraFin;
@@ -28,7 +33,23 @@ public class Prestamo implements Cloneable {
             throw new RuntimeException(e);
         }
     }
- public void mostrar(){
+    public void mostrar(){
      System.out.println("el libro: "+ Libro + "sera prestado al Usuario: "+usuario+ "hasta: "+ fechaHoraFin);
- }
+     }
+
+    public void setFechaHoraFin(LocalDateTime fechaHoraFin) {
+        this.fechaHoraFin = fechaHoraFin;
+    }
+
+    public void setFechaHoraInicio(LocalDateTime fechaHoraInicio) {
+        this.fechaHoraInicio = fechaHoraInicio;
+    }
+
+    public void setLibro(Factory.Libro libro) {
+        Libro = libro;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
 }
