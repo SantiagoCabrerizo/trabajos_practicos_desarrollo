@@ -1,10 +1,11 @@
 import Factory.Libro;
 import Factory.LibroFisico;
+<<<<<<< HEAD
 import Factory.LogisticaLibro;
 import Prototype.Prestamo;
+=======
+>>>>>>> 33bfef1993f2dbc541948178c62107eb438c4b64
 import Singleton.Database;
-
-import java.time.LocalDateTime;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -28,10 +29,13 @@ public class Main {
 
 
         //Singleton
+<<<<<<< HEAD
         System.out.println("");
         System.out.println("------------PARTE 1 ---------------");
         System.out.println("");
 
+=======
+>>>>>>> 33bfef1993f2dbc541948178c62107eb438c4b64
         Database db1 = Database.getInstance(); // Obtener instancia de la base de datos
         db1.agregarLibro(libro1);
 
@@ -40,6 +44,7 @@ public class Main {
 
         System.out.println(db1.getLibros());
 
+<<<<<<< HEAD
         System.out.println("");
         System.out.println("------------PARTE 5 ---------------");
         System.out.println("");
@@ -73,6 +78,8 @@ public class Main {
         // Verificamos si son el mismo objeto
         System.out.println("\n¿prestamo1 y prestamo2 son el mismo objeto? " + (prestamo1 == prestamo2));
         System.out.println("\n¿prestamo2 y prestamo3 son el mismo objeto? " + (prestamo2 == prestamo3));
+=======
+>>>>>>> 33bfef1993f2dbc541948178c62107eb438c4b64
 
 
 
