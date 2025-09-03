@@ -30,5 +30,21 @@ public class Prestamo implements Cloneable {
     }
     public void mostrar(){
      System.out.println("el libro: "+ Libro + "sera prestado al Usuario: "+usuario+ "hasta: "+ fechaHoraFin);
- }
+     }
+
+    public void setFechaHoraFin(LocalDateTime fechaHoraFin) {
+        this.fechaHoraFin = fechaHoraFin;
+    }
+
+    public void setFechaHoraInicio(LocalDateTime fechaHoraInicio) {
+        this.fechaHoraInicio = fechaHoraInicio;
+    }
+
+    public void setLibro(Factory.Libro libro) {
+        Libro = libro;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
 }
