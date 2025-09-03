@@ -14,7 +14,7 @@ public class Prestamo implements Cloneable {
     private LocalDateTime fechaHoraFin;
 
     public Prestamo(Factory.Libro libro, String usuario, LocalDateTime fechaHoraInicio, LocalDateTime fechaHoraFin) {
-        Libro = libro;
+        this.Libro = libro;
         this.usuario = usuario;
         this.fechaHoraInicio = fechaHoraInicio;
         this.fechaHoraFin = fechaHoraFin;
@@ -28,7 +28,7 @@ public class Prestamo implements Cloneable {
             throw new RuntimeException(e);
         }
     }
- public void mostrar(){
+    public void mostrar(){
      System.out.println("el libro: "+ Libro + "sera prestado al Usuario: "+usuario+ "hasta: "+ fechaHoraFin);
  }
 }
