@@ -6,7 +6,12 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import Factory.Libro;
+import Factory.LibroFisico;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class Prestamo implements Cloneable {
     private Libro Libro;
     private String usuario;

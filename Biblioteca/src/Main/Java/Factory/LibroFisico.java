@@ -1,5 +1,10 @@
 package Factory;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class LibroFisico implements Libro{
     private String titulo;
     private String autor;

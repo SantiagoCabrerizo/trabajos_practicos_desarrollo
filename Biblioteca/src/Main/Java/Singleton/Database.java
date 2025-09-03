@@ -4,6 +4,11 @@ import javax.xml.crypto.Data;
 import java.util.ArrayList;
 import java.util.List;
 import Factory.Libro;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
     public class Database {
         private static volatile Database instance;
         private List<Libro> libros = new ArrayList<>();

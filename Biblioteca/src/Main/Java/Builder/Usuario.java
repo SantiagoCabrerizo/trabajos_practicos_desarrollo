@@ -1,5 +1,11 @@
 package Builder;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 public  class Usuario {
     private final String NombreUsuario;
     private  final String Direccion;
