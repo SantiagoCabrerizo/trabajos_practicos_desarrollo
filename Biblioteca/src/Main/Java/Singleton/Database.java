@@ -3,10 +3,10 @@ package Singleton;
 import javax.xml.crypto.Data;
 import java.util.ArrayList;
 import java.util.List;
-
+import Factory.Libro;
     public class Database {
         private static volatile Database instance;
-        private List<Main.Java.Factory.Libro> libros = new ArrayList<>();
+        private List<Libro> libros = new ArrayList<>();
 
         private Database() {
             System.out.println("Accediendo a la base de datos...");
@@ -17,16 +17,24 @@ import java.util.List;
                 synchronized (Database.class) {
                     if (instance == null) {
                         instance = new Database();
+                        System.out.println("conexion establecida...");
+
                     }
                 }
             } return instance;
         }
 
-        public void agregarLibro(Main.Java.Factory.Libro libro) {
+
+
+        public void agregarLibro(Libro libro) {
+
             libros.add(libro);
+            System.out.println("libro añadido");
         }
 
-        public List<Main.Java.Factory.Libro> getLibros() {
+
+        public List<Libro> getLibros() {
+            System.out.println("lista de libros a continuacion...");
             return libros;
         }
     }

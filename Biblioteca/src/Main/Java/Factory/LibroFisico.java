@@ -16,4 +16,8 @@ public class LibroFisico implements Libro{
         System.out.println("Libro Físico: "+edicion);
     }
 
+    @Override
+    public String toString() {
+        return "titulo: " + titulo + "autor: " + autor + "edicion: " + edicion;
+    }
 }
