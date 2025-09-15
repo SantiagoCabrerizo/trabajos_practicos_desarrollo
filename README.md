@@ -6,5 +6,5 @@ Cada carpeta incluye su respectivo trabajo práctico.
 - Gonzalo Ibarra
 - Chirino
 - Bustelo
-- Brenda
-- Natalia
+- Alcoba
+- Mallmann
