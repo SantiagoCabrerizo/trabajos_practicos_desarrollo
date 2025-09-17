@@ -9,7 +9,7 @@ public class BridgeMain {
         Tipo alerta=new Alerta(email);
         Tipo promo= new Promocion(sms);
         Tipo recordatorio = new Recordatorio(email);
-//Ejecutamos el metodo enviar
+//Ejecutamos el metodo
         alerta.enviar();
         promo.enviar();
         recordatorio.enviar();
