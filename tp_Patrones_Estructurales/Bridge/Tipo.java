@@ -8,6 +8,7 @@ import lombok.Setter;
     @Setter
 
     public abstract class Tipo {
+
         protected Envio envio;
 
         public Tipo (Envio envio){this.envio=envio;}
