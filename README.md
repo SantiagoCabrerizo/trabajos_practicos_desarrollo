@@ -4,7 +4,7 @@ Cada carpeta incluye su respectivo trabajo práctico.
 - Santiago Cabrerizo
 - Máximo Perea
 - Gonzalo Ibarra
-- Chirino
+- Rosario Chirino
 - Bustelo
-- Alcoba
-- Mallmann
+- Brenda Alcoba
+- Natalia Mallmann
