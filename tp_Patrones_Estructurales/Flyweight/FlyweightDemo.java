@@ -9,14 +9,14 @@ public class FlyweightDemo {
 
         FabricaDeArboles fabrica =new FabricaDeArboles();
 
-        String [] tipos= {"Cerezo","Roble"};
-        String [] texturas= {"Sueve","Rugosa"};
-        String [] colores= {"Rosado","verde"};
+        String [] tipos= {"Cerezo","Roble","Pino"};
+        String [] texturas= {"Sueve","Rugosa", "Áspera"};
+        String [] colores= {"Rosado","verde","Verde Oscuro"};
 
         final int Total = 20;
         Random rand = new Random(42);
 
-        List<Arbol> arbolFlylist = new ArrayList<>(Total);
+        List<ArbolConcreto> arbolFlylist = new ArrayList<>(Total);
         List<int[]> posiciones = new ArrayList<>(Total);
 
         for (int i=0; i<Total; i++){
@@ -27,13 +27,13 @@ public class FlyweightDemo {
             int x = rand.nextInt(10_000);
             int y = rand.nextInt(10_000);
 
-            Arbol arbolFly = fabrica.obtenerArbol(tipo, color, textura);
+            ArbolConcreto arbolFly = (ArbolConcreto) fabrica.obtenerArbol(tipo, color, textura);
 
             arbolFlylist.add(arbolFly);
             posiciones.add(new int[]{x,y});
         }
         for (int i=0; i<arbolFlylist.size();i++){
-            Arbol a= arbolFlylist.get(i);
+            ArbolConcreto a= arbolFlylist.get(i);
             int[] pos= posiciones.get(i);
             a.dibujar(pos[0],pos[1]);
         }
