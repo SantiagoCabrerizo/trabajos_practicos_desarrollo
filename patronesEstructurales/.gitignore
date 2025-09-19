@@ -3,6 +3,10 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
+# Archivos de configuración de IntelliJ
+*.iml
+.idea/
+
 ### Eclipse ###
 .apt_generated
 .classpath
