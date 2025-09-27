@@ -35,5 +35,23 @@ public class Main {
         a4.enviar("Sí, ahora los mando.");
 
 
+
+        System.out.println("\n5) Memento-----------------------------");
+        Examen examen = new Examen(1);
+
+        //Conservamos el polimorfismo (Usuario para todos), pero en un caso particular usamos los métodos de Alumno
+        // por eso casteamos y esto le indica al compilador que ese Usuario en realidad es un Alumno.
+        ((Alumno) a1).responder(examen, "Respuesta 1");
+        ((Alumno) a1).responder(examen, "Respuesta 2");
+        examen.mostrar();
+        ((Alumno) a1).guardarProgreso(examen);
+
+        ((Alumno) a1).responder(examen, "Respuesta 3");
+        examen.mostrar();
+
+        System.out.println("\nRestauramos el progreso antes de hacer la respuesta 3:");
+        ((Alumno) a1).restaurarProgreso(examen);
+        examen.mostrar();
+
     }
 }

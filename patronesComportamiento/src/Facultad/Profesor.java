@@ -6,6 +6,8 @@ public class Profesor extends Usuario{
         super(legajo, dni, nombreApellido, mail, telefono);
     }
 
+
+    //Mediator
     public void enviar(String mensaje) {
         System.out.println("\n" + nombreApellido + " (Docente) envía: " + mensaje);
         mediator.enviarMensaje(mensaje, this);
