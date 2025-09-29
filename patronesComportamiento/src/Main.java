@@ -1,6 +1,6 @@
 import Facultad.*;
 import Mediator.*;
-
+import Template.*;
 public class Main {
     public static void main(String[] args) {
 
@@ -52,6 +52,18 @@ public class Main {
         System.out.println("\nRestauramos el progreso antes de hacer la respuesta 3:");
         ((Alumno) a1).restaurarProgreso(examen);
         examen.mostrar();
+//templateMethod
+        ReporteAlumno reporteAlumno=new ReporteAlumno();
+        ReporteCurso reporteCurso =new ReporteCurso();
+
+
+        System.out.println("Reporte Alumno");
+        reporteAlumno.generarReporte();
+        System.out.println("Reporte Curso");
+        reporteCurso.generarReporte();
+
+
+
 
     }
 }
