@@ -1,5 +1,13 @@
 package Facultad;
 import Mediator.ChatMediator;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
+
+
 
 public abstract class Usuario {
     protected int legajo;
