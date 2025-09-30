@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/patronesComportamiento/patronesComportamiento.iml" filepath="$PROJECT_DIR$/patronesComportamiento/patronesComportamiento.iml" />
+      <module fileurl="file://$PROJECT_DIR$/patronesEstructurales/patronesEstructurales.iml" filepath="$PROJECT_DIR$/patronesEstructurales/patronesEstructurales.iml" />
+      <module fileurl="file://$PROJECT_DIR$/patrones_tp/patrones_tp.iml" filepath="$PROJECT_DIR$/patrones_tp/patrones_tp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/trabajos_practicos_desarrollo.iml" filepath="$PROJECT_DIR$/.idea/trabajos_practicos_desarrollo.iml" />
+    </modules>
+  </component>
+</project>
