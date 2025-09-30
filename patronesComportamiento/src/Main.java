@@ -1,6 +1,11 @@
 import Facultad.*;
 import Mediator.*;
+import Strategy.*;
 import Template.*;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -61,6 +66,24 @@ public class Main {
         reporteAlumno.generarReporte();
         System.out.println("Reporte Curso");
         reporteCurso.generarReporte();
+
+
+//Strategy
+        Alumno alumno= new Alumno(1234,"3245","Juan Pepe","juanpepe@email.com","2345674",new PromedioSimple());
+        alumno.cargarNotas(7,8,9);
+
+        System.out.println(alumno.getNombreApellido()+" Promedio simple:"+alumno.calcularNotaFinal());
+
+
+        Alumno alumno1= new Alumno(1234,"3245","Pepe Juan","juanpepe@email.com","2345674",new PromedioPonderado(Arrays.asList(7,2,1)));
+        alumno1.cargarNotas(5,3,10);
+
+        System.out.println(alumno1.getNombreApellido()+" Promedio ponderado: "+ alumno1.calcularNotaFinal());
+
+
+
+
+
 
 
 
