@@ -1,5 +1,6 @@
 import Facultad.*;
 import Mediator.*;
+import State.Inscripcion;
 import Strategy.*;
 import Template.*;
 
@@ -68,6 +69,20 @@ public class Main {
         reporteCurso.generarReporte();
 
 
+//State
+        System.out.println("\n7) State-----------------------------");
+        Inscripcion inscripcion1= new Inscripcion();
+
+        inscripcion1.inscribir();
+        inscripcion1.enEspera();
+        inscripcion1.cancelar();
+        inscripcion1.inscribir();
+
+        Inscripcion inscripcion2= new Inscripcion();
+
+        inscripcion2.cancelar();
+        inscripcion2.enEspera();
+
 //Strategy
         Alumno alumno= new Alumno(1234,"3245","Juan Pepe","juanpepe@email.com","2345674",new PromedioSimple());
         alumno.cargarNotas(7,8,9);
@@ -79,7 +94,6 @@ public class Main {
         alumno1.cargarNotas(5,3,10);
 
         System.out.println(alumno1.getNombreApellido()+" Promedio ponderado: "+ alumno1.calcularNotaFinal());
-
 
 
 
