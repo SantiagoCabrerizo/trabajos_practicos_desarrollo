@@ -1,4 +1,6 @@
 import Facultad.*;
+import Iterator.Curso;
+import Iterator.CursoIterator;
 import Mediator.*;
 import State.Inscripcion;
 import Strategy.*;
@@ -124,6 +126,27 @@ public class Main {
         alumnoRegular2.aceptar(aplicarBeca);
         alumnoBecado1.aceptar(aplicarBeca);
         alumnoBecado2.aceptar(aplicarBeca);
+
+        System.out.println("");
+        System.out.println("-------------------------Prueba Iterator-------------------------");
+
+
+        Usuario a5 = new Alumno(5, "45678944", "Camila perez", "camiperez@mail.com", "444-466");
+
+        alumno.inscribirCurso(new Curso("Analisis Numerico"));
+        alumno.inscribirCurso(new Curso("Commputacion Paralela"));
+        alumno.inscribirCurso(new Curso("Bases de Datos"));
+
+        System.out.println("Cursos de " + a5.getNombreApellido() + ":");
+
+        // Recorremos usando el Iterator propio
+        CursoIterator it = alumno.iterator();
+        while (it.hasNext()) {
+            Curso c = it.next();
+            System.out.println("- " + c.getNombre());
+        }
+
+
 
 
     }
