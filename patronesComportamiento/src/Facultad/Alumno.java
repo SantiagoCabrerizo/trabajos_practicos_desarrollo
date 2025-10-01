@@ -1,8 +1,13 @@
 package Facultad;
 
+import Iterator.Curso;
+import Iterator.CursoIterator;
+import Iterator.ListaCursosIterator;
 import Memento.Memento;
 import Strategy.CalculoNota;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
@@ -13,9 +18,12 @@ import java.util.List;
 @Getter
 @Setter
 
+
 public class Alumno extends Usuario{
   private List<Integer> notas;
   private CalculoNota estrategia;
+  //Atributos para implementar iterator
+  private java.util.List<Curso> cursos = new java.util.ArrayList<>();
 
     public Alumno(int legajo, String dni, String nombreApellido, String mail, String telefono) {
         super(legajo, dni, nombreApellido, mail, telefono);
@@ -42,12 +50,6 @@ public class Alumno extends Usuario{
     public  double calcularNotaFinal(){
         return estrategia.CalcularPromedio(notas);
     }
-
-
-
-
-    //.......
-
 
 
 
@@ -79,4 +81,15 @@ public class Alumno extends Usuario{
             examen.restore(historial.pop());
         }
     }
+
+    //Atributos para implementar iterator
+    public void inscribirCurso(Curso curso) {
+        cursos.add(curso);
+    }
+
+    // Devuelve un iterador para recorrer los cursos
+    public CursoIterator iterator() {
+        return new ListaCursosIterator(cursos);
+    }
+
 }

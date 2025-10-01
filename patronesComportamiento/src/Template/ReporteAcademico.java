@@ -1,19 +1,24 @@
 package Template;
 
-abstract class ReporteAcademico {
+public abstract class ReporteAcademico {
 
     public final void generarReporte(){
-        publicarNotas();
-        actualizarEstadoAcademico();
-        calcularPromedio();
+       generarEncabezado();
+       generarContenido();
+       generarPie();
     }
-    protected abstract void publicarNotas();
-    protected void actualizarEstadoAcademico(){
-        System.out.println("Actualizando Estado Academico");
-    }
-    protected abstract void calcularPromedio();
+
+    private void generarEncabezado(){
+        System.out.println("Reporte Academico");
 
 
+
+    }
+    protected abstract void generarContenido();
+
+    private void  generarPie(){
+        System.out.println("Fin del Reporte Academico");
+    }
 
 
 

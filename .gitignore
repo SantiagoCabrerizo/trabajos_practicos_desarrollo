@@ -1,0 +1,9 @@
+# Archivos temporales de IntelliJ
+.idea/
+*.iml
+
+# Carpeta de compilación
+out/
+
+# Archivos generados, logs, temporales
+*.log

@@ -6,9 +6,6 @@ import lombok.Setter;
 @Getter
 @Setter
 
-
-
-
 public abstract class Usuario {
     protected int legajo;
     protected String dni;
@@ -23,6 +20,19 @@ public abstract class Usuario {
         this.nombreApellido = nombreApellido;
         this.mail = mail;
         this.telefono = telefono;
+    }
+
+    // ================ Command
+    public void inscribirse(String curso) {
+        System.out.println(legajo + " se inscribió en el curso: " + curso);
+    }
+
+    public void abandonar(String curso) {
+        System.out.println(legajo + " abandonó el curso: " + curso);
+    }
+
+    public void solicitarCertificado(String curso) {
+        System.out.println(legajo + " solicitó certificado del curso: " + curso);
     }
 
     //Mediator
