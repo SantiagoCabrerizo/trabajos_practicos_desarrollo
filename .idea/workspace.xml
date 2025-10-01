@@ -4,6 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="cb72a326-5793-4e5b-b174-f9f26c7e05cf" name="Changes" comment="State" />
+=======
     <list default="true" id="cb72a326-5793-4e5b-b174-f9f26c7e05cf" name="Changes" comment="Corrección Flyweight">
       <change afterPath="$PROJECT_DIR$/patronesComportamiento/src/Iterator/Curso.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/patronesComportamiento/src/Iterator/CursoIterator.java" afterDir="false" />
@@ -12,6 +15,7 @@
       <change beforePath="$PROJECT_DIR$/patronesComportamiento/src/Facultad/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/patronesComportamiento/src/Facultad/Alumno.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/patronesComportamiento/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/patronesComportamiento/src/Main.java" afterDir="false" />
     </list>
+>>>>>>> ad8840fb348de6a3659fd41d4880c6a7359c1fe4
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +63,11 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;patronesComportamiento&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+<<<<<<< HEAD
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mallm/Documents/Desarrollo de software/prof gmagni/4.JUnit/JUNIT&quot;
+=======
     &quot;last_opened_file_path&quot;: &quot;C:/Users/mallm/Documents/Desarrollo de software/prof Cortez/clase 09-09/traza1-main&quot;
+>>>>>>> ad8840fb348de6a3659fd41d4880c6a7359c1fe4
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -79,11 +87,20 @@
       <option name="project" value="LOCAL" />
       <updated>1758201419561</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="State">
+      <option name="closed" value="true" />
+      <created>1759273405706</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1759273405708</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Corrección Flyweight" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrección Flyweight" />
+    <MESSAGE value="State" />
+    <option name="LAST_COMMIT_MESSAGE" value="State" />
   </component>
 </project>
