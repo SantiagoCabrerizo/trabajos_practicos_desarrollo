@@ -5,6 +5,7 @@ import Iterator.CursoIterator;
 import Iterator.ListaCursosIterator;
 import Memento.Memento;
 import Strategy.CalculoNota;
+import observer.Observer;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,7 +20,7 @@ import java.util.List;
 @Setter
 
 
-public class Alumno extends Usuario{
+public class Alumno extends Usuario implements Observer{
   private List<Integer> notas;
   private CalculoNota estrategia;
   //Atributos para implementar iterator
@@ -90,6 +91,14 @@ public class Alumno extends Usuario{
     // Devuelve un iterador para recorrer los cursos
     public CursoIterator iterator() {
         return new ListaCursosIterator(cursos);
+    }
+
+    // Observer - implementación del método update
+    @Override
+    public void update(String msg) {
+        // Silencioso para no llenar la consola. El Subject (Curso) imprime el resumen agrupado.
+        // Si querés ver por-alumno, descomentá la línea de abajo:
+        // System.out.println("   · (" + nombreApellido + ") <- " + msg);
     }
 
 }

@@ -20,7 +20,7 @@ public class Main {
 
         System.out.println("Patrones de Comportamientos");
         // ====================== Chain of Responsibility
-        System.out.println("---- Chain of Responsibility ----");
+        System.out  .println("---- Chain of Responsibility ----");
         Handler asistente = new AsistenteCr();
         Handler profesor = new ProfesorCr();
         Handler coordinador = new CoordinadorCr();
@@ -94,6 +94,46 @@ public class Main {
         System.out.println("\nRestauramos el progreso antes de hacer la respuesta 3:");
         ((Alumno) a1).restaurarProgreso(examen);
         examen.mostrar();
+
+        System.out.println("\n6) Observer-----------------------------");
+        // Crear cursos para el patrón Observer (usando las clases existentes)
+        Curso cursoDS = new Curso("Desarrollo de Software");
+        Curso cursoEDD = new Curso("Estructuras de Datos");
+        
+        // Crear alumnos para el patrón Observer (usando la clase Alumno existente)
+        Alumno alumnoAna = new Alumno(10, "12345678", "Ana Rodriguez", "ana@mail.com", "111-111");
+        Alumno alumnoBruno = new Alumno(11, "23456789", "Bruno Gonzalez", "bruno@mail.com", "222-222");
+        Alumno alumnoCarla = new Alumno(12, "34567890", "Carla Perez", "carla@mail.com", "333-333");
+        Alumno alumnoDiego = new Alumno(13, "45678901", "Diego Martinez", "diego@mail.com", "444-444");
+        Alumno alumnoEva = new Alumno(14, "56789012", "Eva Lopez", "eva@mail.com", "555-555");
+        
+        // Inscripciones
+        System.out.println("Inscribiendo alumnos...");
+        cursoDS.addObserver(alumnoAna);
+        cursoDS.addObserver(alumnoBruno);
+        cursoDS.addObserver(alumnoCarla);
+        cursoEDD.addObserver(alumnoDiego);
+        cursoEDD.addObserver(alumnoEva);
+        
+        System.out.println("Inscriptos en " + cursoDS.getNombre() + ": " + String.join(", ", cursoDS.getNombresInscriptos()));
+        System.out.println("Inscriptos en " + cursoEDD.getNombre() + ": " + String.join(", ", cursoEDD.getNombresInscriptos()));
+        
+        // Notificaciones
+        System.out.println("\nEnviando notificaciones...");
+        cursoDS.cambiarHorario("Lunes 18:00-20:00 (Aula 12)");
+        cursoDS.publicarAviso("Parcial 1 el 15/10");
+        
+        cursoEDD.cambiarHorario("Miércoles 10:00-12:00 (Lab B)");
+        cursoEDD.publicarAviso("TP#1 publicado en el campus");
+        
+        // Desinscripciones
+        System.out.println("\nProcesando bajas...");
+        cursoDS.removeObserverByName("Bruno Gonzalez");
+        System.out.println("Inscriptos en " + cursoDS.getNombre() + " después de la baja: " + String.join(", ", cursoDS.getNombresInscriptos()));
+        
+        // Demostrar que el alumno dado de baja ya no recibe notificaciones
+        System.out.println("\nEnviando nueva notificación después de las bajas...");
+        cursoDS.publicarAviso("Bruno ya no recibirá esta notificación - Recordatorio: Entrega del TP2 el viernes");
 
 //State
         System.out.println("\n7) State-----------------------------");
@@ -175,6 +215,8 @@ public class Main {
             Curso c = it.next();
             System.out.println("- " + c.getNombre());
         }
+
+
 
 
     }
