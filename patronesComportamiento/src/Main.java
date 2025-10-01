@@ -3,6 +3,7 @@ import Mediator.*;
 import State.Inscripcion;
 import Strategy.*;
 import Template.*;
+import Visitor.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
@@ -106,6 +107,23 @@ public class Main {
         reporteCurso.generarReporte();
 
 //-------------------------------------------------------------------------------------
+
+//Visitor
+        System.out.println(" =====Visitor=====");
+        //Creamos alumnos becados y regulares
+        AlumnoRegular alumnoRegular1 = new AlumnoRegular("Ana Rodriguez", 50000.0);
+        AlumnoRegular alumnoRegular2 = new AlumnoRegular("Marta Suarez", 50000.0);
+
+        AlumnoBecado alumnoBecado1 = new AlumnoBecado("Juan Gallardo", 50000.0, 0.3); // 30% de beca
+        AlumnoBecado alumnoBecado2 = new AlumnoBecado("Lucía Lencina", 50000.0, 0.5); // 50% de beca
+
+        //Creación de visitor
+        Visitor aplicarBeca = new AplicarBeca();
+
+        alumnoRegular1.aceptar(aplicarBeca);
+        alumnoRegular2.aceptar(aplicarBeca);
+        alumnoBecado1.aceptar(aplicarBeca);
+        alumnoBecado2.aceptar(aplicarBeca);
 
 
     }
