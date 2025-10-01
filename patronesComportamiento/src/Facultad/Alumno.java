@@ -2,7 +2,9 @@ package Facultad;
 
 import Memento.Memento;
 import Strategy.CalculoNota;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
@@ -12,6 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 @Getter
 @Setter
+
 
 public class Alumno extends Usuario{
   private List<Integer> notas;

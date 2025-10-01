@@ -2,9 +2,12 @@ import Facultad.*;
 import Mediator.*;
 import Strategy.*;
 import Template.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -57,16 +60,6 @@ public class Main {
         System.out.println("\nRestauramos el progreso antes de hacer la respuesta 3:");
         ((Alumno) a1).restaurarProgreso(examen);
         examen.mostrar();
-//templateMethod
-        ReporteAlumno reporteAlumno=new ReporteAlumno();
-        ReporteCurso reporteCurso =new ReporteCurso();
-
-
-        System.out.println("Reporte Alumno");
-        reporteAlumno.generarReporte();
-        System.out.println("Reporte Curso");
-        reporteCurso.generarReporte();
-
 
 //Strategy
         Alumno alumno= new Alumno(1234,"3245","Juan Pepe","juanpepe@email.com","2345674",new PromedioSimple());
@@ -82,9 +75,22 @@ public class Main {
 
 
 
+//Template
+
+        ReporteAcademico reporte1=new ReporteAlumno(alumno);
+        ReporteCurso reporteCurso1 =new ReporteCurso();
 
 
+        System.out.println("Reporte Alumno");
+        reporte1.generarReporte();
 
+
+        List<Alumno>alumnosCurso=Arrays.asList(alumno,alumno1);
+        ReporteAcademico reporteCurso= new ReporteCurso("Desarrollo de Software" , alumnosCurso);
+        System.out.println("Reporte Curso");
+        reporteCurso.generarReporte();
+
+//-------------------------------------------------------------------------------------
 
 
 
