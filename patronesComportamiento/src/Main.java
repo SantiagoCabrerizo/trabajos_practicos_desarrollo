@@ -80,6 +80,7 @@ public class Main {
         inscripcion2.enEspera();
 
 //Strategy
+        System.out.println("Strategy--------------------------------------------");
         Alumno alumno= new Alumno(1234,"3245","Juan Pepe","juanpepe@email.com","2345674",new PromedioSimple());
         alumno.cargarNotas(7,8,9);
 
@@ -94,7 +95,7 @@ public class Main {
 
 
 //Template
-
+        System.out.println("Template-----------------------------------------------------------------------------------");
         ReporteAcademico reporte1=new ReporteAlumno(alumno);
         ReporteCurso reporteCurso1 =new ReporteCurso();
 
